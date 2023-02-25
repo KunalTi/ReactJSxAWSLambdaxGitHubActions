@@ -19,8 +19,7 @@ jobs:
           aws-region: us-east-1
       - name: Deploy to AWS Lambda
         run: |
-          pip install awscli
-          
           aws lambda update-function-code \
             --function-name react \
-            --zip-file fileb://.github/workflows/index.zip
+            --zip-file fileb://index.zip
+            
