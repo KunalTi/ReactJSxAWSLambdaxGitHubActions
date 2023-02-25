@@ -20,6 +20,7 @@ jobs:
       - name: Deploy to AWS Lambda
         run: |
           npm install -g aws-cli
+          npm cache clean --force
           
           aws lambda update-function-code \
             --function-name react \
