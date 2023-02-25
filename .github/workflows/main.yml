@@ -19,8 +19,7 @@ jobs:
           aws-region: us-east-1
       - name: Deploy to AWS Lambda
         run: |
-          npm install -g aws-cli
-          npm cache clean --force
+          pip install awscli
           
           aws lambda update-function-code \
             --function-name react \
