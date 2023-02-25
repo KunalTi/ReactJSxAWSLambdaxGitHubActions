@@ -18,9 +18,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to AWS Lambda
-        run: >+
-          pip install --upgrade pip
+        uses: appleboy/aws-lambda-deploy@v1
+        with:
+          function-name: lamda 
+          zip-file: ./lambda.zip
+          region: us-east-1
+          run: >+
+            pip install --upgrade pip
 
-          pip install --upgrade awscli
+            pip install --upgrade awscli
 
-          aws lambda update-function-code --function-name lamda --zip-file fileb://lambda.zip
+            aws lambda update-function-code --function-name lamda --zip-file fileb://lambda.zip
