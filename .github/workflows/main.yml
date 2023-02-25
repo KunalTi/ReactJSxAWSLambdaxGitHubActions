@@ -23,4 +23,4 @@ jobs:
 
           pip install awscli
 
-          aws lambda update-function-code --function-name tesy --zip-file fileb://lambda_function.zip
+          aws lambda update-function-code --function-name lamda
