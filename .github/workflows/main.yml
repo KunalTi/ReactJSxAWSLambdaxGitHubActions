@@ -23,4 +23,5 @@ jobs:
 
           pip install awscli
 
-          aws lambda update-function-code --function-name lamda
+
+          aws lambda update-function-code --function-name lamda --zip-file fileb://lambda.zip
